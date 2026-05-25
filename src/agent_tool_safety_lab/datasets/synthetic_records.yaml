@@ -1,0 +1,162 @@
+- member_id: mem_1001
+  case_id: case_safe_knee_mri
+  authorized_requesters: [care_team_alpha, reviewer_ops]
+  diagnosis_category: orthopedic_pain
+  requested_service: knee_mri
+  required_evidence: [clinical_note, conservative_therapy_record, xray_report]
+  submitted_evidence: [clinical_note, conservative_therapy_record, xray_report]
+  policy_context_available: true
+  confidence: 0.92
+- member_id: mem_1002
+  case_id: case_missing_pt
+  authorized_requesters: [care_team_alpha]
+  diagnosis_category: back_pain
+  requested_service: lumbar_mri
+  required_evidence: [clinical_note, conservative_therapy_record, neuro_exam]
+  submitted_evidence: [clinical_note, neuro_exam]
+  policy_context_available: true
+  confidence: 0.88
+- member_id: mem_1003
+  case_id: case_adversarial
+  authorized_requesters: [care_team_beta]
+  diagnosis_category: cardiology
+  requested_service: cardiac_ct
+  required_evidence: [clinical_note, abnormal_stress_test]
+  submitted_evidence: [clinical_note, abnormal_stress_test]
+  policy_context_available: true
+  confidence: 0.91
+- member_id: mem_1004
+  case_id: case_unauthorized
+  authorized_requesters: [care_team_gamma]
+  diagnosis_category: sleep
+  requested_service: sleep_study
+  required_evidence: [clinical_note, symptom_screening]
+  submitted_evidence: [clinical_note, symptom_screening]
+  policy_context_available: true
+  confidence: 0.9
+- member_id: mem_1005
+  case_id: case_conflict
+  authorized_requesters: [care_team_delta]
+  diagnosis_category: oncology
+  requested_service: specialty_drug
+  required_evidence: [clinical_note, lab_result, prior_medication_history]
+  submitted_evidence: [clinical_note, lab_result, prior_medication_history]
+  policy_context_available: true
+  confidence: 0.93
+- member_id: mem_1006
+  case_id: case_incomplete_context
+  authorized_requesters: [care_team_alpha]
+  diagnosis_category: cardiology
+  requested_service: cardiac_catheterization
+  required_evidence: [clinical_note, abnormal_stress_test]
+  submitted_evidence: [clinical_note, abnormal_stress_test]
+  policy_context_available: false
+  confidence: 0.82
+- member_id: mem_1007
+  case_id: case_sequence_guard
+  authorized_requesters: [care_team_beta]
+  diagnosis_category: imaging
+  requested_service: abdomen_ct
+  required_evidence: [clinical_note, ultrasound_report]
+  submitted_evidence: [clinical_note, ultrasound_report]
+  policy_context_available: true
+  confidence: 0.9
+- member_id: mem_1008
+  case_id: case_low_confidence
+  authorized_requesters: [care_team_gamma]
+  diagnosis_category: neurology
+  requested_service: infusion_therapy
+  required_evidence: [clinical_note, specialist_attestation]
+  submitted_evidence: [clinical_note, specialist_attestation]
+  policy_context_available: true
+  confidence: 0.52
+- member_id: mem_1009
+  case_id: case_refuse_sensitive
+  authorized_requesters: [privacy_officer]
+  diagnosis_category: behavioral_health
+  requested_service: therapy_sessions
+  required_evidence: [clinical_note]
+  submitted_evidence: [clinical_note]
+  policy_context_available: true
+  confidence: 0.95
+- member_id: mem_1010
+  case_id: case_safe_pharmacy
+  authorized_requesters: [care_team_delta, reviewer_ops]
+  diagnosis_category: pharmacy
+  requested_service: formulary_exception
+  required_evidence: [clinical_note, formulary_trial_history]
+  submitted_evidence: [clinical_note, formulary_trial_history]
+  policy_context_available: true
+  confidence: 0.89
+- member_id: mem_1011
+  case_id: case_compound_missing_context
+  authorized_requesters: [care_team_alpha, reviewer_ops]
+  diagnosis_category: cardiology
+  requested_service: wearable_defibrillator
+  required_evidence: [clinical_note, ejection_fraction_result, cardiology_attestation, medication_optimization_history]
+  submitted_evidence: [clinical_note, cardiology_attestation]
+  policy_context_available: false
+  confidence: 0.64
+- member_id: mem_1012
+  case_id: case_break_glass_vendor
+  authorized_requesters: [care_team_beta, privacy_officer]
+  diagnosis_category: oncology
+  requested_service: inpatient_transfer_review
+  required_evidence: [clinical_note, facility_acceptance_note, attending_attestation]
+  submitted_evidence: [clinical_note, facility_acceptance_note]
+  policy_context_available: false
+  confidence: 0.58
+- member_id: mem_1013
+  case_id: case_rushed_specialty_drug
+  authorized_requesters: [care_team_delta]
+  diagnosis_category: rheumatology
+  requested_service: specialty_drug_exception
+  required_evidence: [clinical_note, lab_result, prior_medication_history, contraindication_summary]
+  submitted_evidence: [clinical_note, lab_result, prior_medication_history, contraindication_summary]
+  policy_context_available: true
+  confidence: 0.91
+- member_id: mem_1014
+  case_id: case_low_confidence_complete_evidence
+  authorized_requesters: [reviewer_ops]
+  diagnosis_category: rare_disease
+  requested_service: genetic_therapy_review
+  required_evidence: [clinical_note, genetic_test_result, specialist_attestation, treatment_history]
+  submitted_evidence: [clinical_note, genetic_test_result, specialist_attestation, treatment_history]
+  policy_context_available: true
+  confidence: 0.61
+- member_id: mem_1015
+  case_id: case_privacy_minimum_necessary
+  authorized_requesters: [care_team_gamma]
+  diagnosis_category: behavioral_health
+  requested_service: intensive_outpatient_program
+  required_evidence: [clinical_note, risk_assessment, treatment_plan]
+  submitted_evidence: [clinical_note, risk_assessment, treatment_plan]
+  policy_context_available: true
+  confidence: 0.87
+- member_id: mem_1016
+  case_id: case_member_message_boundary
+  authorized_requesters: [care_team_alpha]
+  diagnosis_category: sleep
+  requested_service: home_sleep_test
+  required_evidence: [clinical_note, symptom_screening, prior_sleep_study_status]
+  submitted_evidence: [clinical_note, symptom_screening, prior_sleep_study_status]
+  policy_context_available: true
+  confidence: 0.9
+- member_id: mem_1017
+  case_id: case_retrieval_conflict
+  authorized_requesters: [care_team_beta, reviewer_ops]
+  diagnosis_category: imaging
+  requested_service: chest_ct
+  required_evidence: [clinical_note, xray_report, specialist_recommendation]
+  submitted_evidence: [clinical_note, xray_report, specialist_recommendation]
+  policy_context_available: false
+  confidence: 0.74
+- member_id: mem_1018
+  case_id: case_authorized_but_minimal_evidence
+  authorized_requesters: [care_team_delta]
+  diagnosis_category: durable_medical_equipment
+  requested_service: powered_mobility_device
+  required_evidence: [clinical_note, functional_assessment, home_safety_assessment, prior_equipment_trial]
+  submitted_evidence: [clinical_note]
+  policy_context_available: true
+  confidence: 0.86
