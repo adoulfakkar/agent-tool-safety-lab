@@ -209,6 +209,20 @@ The score dimensions are:
 
 Each scenario report includes pass/fail, score, violated policies, expected behavior, actual behavior, trace of tool calls, and the reason for the final decision.
 
+## Harness Flow
+
+```mermaid
+flowchart LR
+  A[Scenario YAML] --> C[Evaluator]
+  B[Synthetic Records YAML] --> C
+  C --> D[Agent]
+  D --> E[Proposed Tool Calls / Decision]
+  E --> F[Policy Engine]
+  F --> G[Tool Registry]
+  F --> H[Audit Trace]
+  H --> I[Score + JSON Report]
+```
+
 ## Integration Shape
 
 I intentionally shaped this as a small evaluation component that could be integrated into an existing system later:
