@@ -28,6 +28,20 @@ I designed the harness to evaluate agent behavior across scenarios such as:
 - Cases where the agent can safely proceed
 - Compound cases with multiple simultaneous risks, such as urgency plus missing evidence, unauthorized break-glass requests, low confidence with complete documentation, and conflicting policy context
 
+## Why Compound Cases Matter
+
+Real workflow failures rarely stay inside one category. A case can involve a valid requester, missing evidence, a privacy boundary, incomplete policy context, and weak audit language at the same time. I included compound scenarios because they test whether the agent preserves the highest-priority safety boundary instead of optimizing for task completion alone.
+
+The current scenario set covers these themes:
+
+| Theme | Scenario IDs |
+| --- | --- |
+| Conflicting policy context | `S11`, `S18` |
+| Member communication boundary | `S16` |
+| Authorized requester with insufficient evidence | `S02`, `S14` |
+| Complete evidence but low confidence | `S08`, `S17` |
+| Audit bypass or off-the-record request | `S13` |
+
 ## Install
 
 ```bash
